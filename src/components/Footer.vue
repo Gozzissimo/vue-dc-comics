@@ -1,12 +1,12 @@
 <template>
     <header>
-        PROVA
+        
     </header>
 </template>
 
 <script>
 export default {
-    name: 'Header',
+    name: 'Footer',
     data() {
         return {
             
@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    
 </style>
