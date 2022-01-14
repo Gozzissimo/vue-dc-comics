@@ -1,10 +1,8 @@
 <template>
     <li>
-        <div>
-            <a href="#">
-                <img :src="thumbElement" :alt="seriesName">
-                <h3>{{ seriesName }}</h3>
-            </a>
+        <div class="comic-container">
+            <img :src="thumbElement" :alt="seriesName">
+            <h3>{{ seriesName }}</h3>
         </div>
     </li>
 </template>
@@ -17,5 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+    .comic-container {
+        flex-basis: calc(100% / 6);
+    }
 </style>

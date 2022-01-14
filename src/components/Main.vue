@@ -1,8 +1,8 @@
 <template>
     <main>
         <section class="main-top">
-            <div class="container flex">
-                <ul>
+            <div class="container">
+                <ul class="flex">
                     <ComicsElement 
                         v-for="(comic, index) in comics"
                         :key="index"
@@ -59,7 +59,7 @@ export default {
     components: {
         ComicsElement,
     },
-    
+
     data() {
         return {
             comics: [
@@ -143,10 +143,14 @@ export default {
 
 <style lang="scss" scoped>
     @import "../assets/scss/partials/_variables.scss";
+
     main {
         background-color: $mainTopBackground;
         .main-top {
             color: $whiteFontColor;
+            .container ul {
+                flex-wrap: wrap;
+            }
         }
         .main-bottom {
             background-color: $blueFontColor;
