@@ -13,6 +13,9 @@
                     :thumbElement="comic.thumb"
                     :seriesName="comic.series"
                 />
+                <a class="cta" href="#">
+                    LOAD MORE
+                </a>
             </div>
         </section>
         <section class="main-bottom">
@@ -172,6 +175,14 @@ export default {
                 justify-content: center;
                 padding-top: 20px;
                 padding-bottom: 20px;
+                margin-bottom: 20px;
+                .cta {
+                    display: block;
+                    color: white;
+                    background-color: $blueFontColor;
+                    border: none;
+                    padding: 10px 50px;
+                }
             }
         }
         .main-bottom {
