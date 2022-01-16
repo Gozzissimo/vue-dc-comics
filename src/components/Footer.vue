@@ -41,13 +41,26 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom container">
-            <a class="cta" href=""></a>
-            <div class="social">
-                <h3></h3>
-                <ul>
-                    <li><img src="" alt=""></li>
-                </ul>
+        <div class="footer-bottom">
+            <div class="container flex">
+                <div class="side-left">
+                    <a class="cta" href="">SIGN-UP NOW!</a>
+                </div>
+                <div class="side-right flex">
+                    <h3>FOLLOW US</h3>
+                    <ul class="social flex">
+                        <li>
+                            <a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+                        <li>
+                            <a href="#"><img src="../assets/img/footer-youtube.png" alt=""></a></li>
+                        <li>
+                            <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a></li>
+                        <li>
+                            <a href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
+                        <li>
+                            <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
@@ -95,7 +108,31 @@ export default {
             }
         }
         .footer-bottom {
-
+            background-color: $blackFontColor;
+            .container {
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.5em 0;
+                .side-left {
+                    .cta {
+                        display: block;
+                        padding: 1em;
+                        color: $whiteFontColor;
+                        border: 2px solid $blueFontColor;
+                    }
+                }
+                .side-right {
+                    align-items: center;
+                    h3 {
+                        color: $blueFontColor;
+                        margin-right: 10px;
+                    }
+                    .social li a{
+                        margin-right: 10px;
+                        display: block;
+                    }
+                }
+            }
         }
     }
 </style>
