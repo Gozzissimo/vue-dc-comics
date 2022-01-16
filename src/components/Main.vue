@@ -1,6 +1,11 @@
 <template>
     <main>
         <section class="main-top">
+            <div class="jumbotron">
+                <h1>
+                    CURRENT SERIES
+                </h1>
+            </div>
             <div class="container flex">
                 <ComicsElement 
                     v-for="(comic, index) in comics"
@@ -146,8 +151,25 @@ export default {
         background-color: $mainTopBackground;
         .main-top {
             color: $whiteFontColor;
+            .jumbotron {
+                height: 400px;
+                background-image: url("../assets/img/jumbotron.jpg");
+                background-size: cover;
+                position: relative;
+                margin-bottom: 20px;
+                h1 {
+                    background-color: $blueFontColor;
+                    display: inline-block;
+                    position: absolute;
+                    top: 92%;
+                    left: 15%;
+                    padding: 0.3em 1em
+                }
+            }
             .container {
                 flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
@@ -157,11 +179,13 @@ export default {
             padding: 30px 0;
             .container {
                 ul {
+                    align-items: center;
                     justify-content: center;
                     li {
                         align-items: center;
+                        flex-basis: calc(100% / 5);
                         img {
-                            width: 20%;
+                            width: 40px;
                         }
                         a {
                             margin-left: 10px;
