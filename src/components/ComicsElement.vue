@@ -1,10 +1,10 @@
 <template>
-    <li>
-        <div class="comic-container">
+    <div class="comic-container">
+        <div class="img">
             <img :src="thumbElement" :alt="seriesName">
-            <h3>{{ seriesName }}</h3>
         </div>
-    </li>
+        <h3>{{ seriesName }}</h3>
+    </div>
 </template>
 
 <script>
@@ -16,6 +16,15 @@ export default {
 
 <style lang="scss" scoped>
     .comic-container {
-        flex-basis: calc(100% / 6);
+        flex-basis: calc((100% / 6) - 20px);
+        margin: 0 10px 30px;
+        .img {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
     }
 </style>

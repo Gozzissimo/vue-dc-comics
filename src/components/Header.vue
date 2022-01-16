@@ -65,6 +65,7 @@ export default {
             ul {
                 align-items: center;
                 li a {
+                    color: $blackFontColor;
                     display: block;
                     padding: 1em;
                     text-transform: uppercase;

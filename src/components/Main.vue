@@ -1,15 +1,13 @@
 <template>
     <main>
         <section class="main-top">
-            <div class="container">
-                <ul class="flex">
-                    <ComicsElement 
-                        v-for="(comic, index) in comics"
-                        :key="index"
-                        :thumbElement="comic.thumb"
-                        :seriesName="comic.series"
-                    />
-                </ul>
+            <div class="container flex">
+                <ComicsElement 
+                    v-for="(comic, index) in comics"
+                    :key="index"
+                    :thumbElement="comic.thumb"
+                    :seriesName="comic.series"
+                />
             </div>
         </section>
         <section class="main-bottom">
@@ -148,8 +146,10 @@ export default {
         background-color: $mainTopBackground;
         .main-top {
             color: $whiteFontColor;
-            .container ul {
+            .container {
                 flex-wrap: wrap;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
         }
         .main-bottom {
