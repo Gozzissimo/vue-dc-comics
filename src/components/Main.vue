@@ -6,16 +6,20 @@
                     CURRENT SERIES
                 </h1>
             </div>
-            <div class="container flex">
+            <div class="container">
+                <div class="comics flex">
                 <ComicsElement 
                     v-for="(comic, index) in comics"
                     :key="index"
                     :thumbElement="comic.thumb"
                     :seriesName="comic.series"
                 />
-                <a class="load-comics" href="#">
-                    LOAD MORE
-                </a>
+                </div>
+                <div class="button">
+                    <a class="load-more" href="#">
+                        LOAD MORE
+                    </a>
+                </div>
             </div>
         </section>
         <section class="main-bottom">
@@ -170,18 +174,24 @@ export default {
                 }
             }
             .container {
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-                .cta {
-                    display: block;
-                    color: white;
-                    background-color: $blueFontColor;
-                    border: none;
-                    padding: 10px 50px;
+                .comics {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+                }
+                .button {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .load-more {
+                        display: inline-block;
+                        color: white;
+                        background-color: $blueFontColor;
+                        border: none;
+                        padding: 10px 50px;
+                    }
                 }
             }
         }
