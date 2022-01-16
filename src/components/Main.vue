@@ -13,7 +13,7 @@
                     :thumbElement="comic.thumb"
                     :seriesName="comic.series"
                 />
-                <a class="cta" href="#">
+                <a class="load-comics" href="#">
                     LOAD MORE
                 </a>
             </div>
